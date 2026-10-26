@@ -6,6 +6,29 @@ You give it a depot, orders (weight, volume, time window) and three vehicle type
 
 Pure Python, no external solver. Українською — [нижче](#-українською).
 
+## 🧩 The problem
+
+Mixed fleets are great for cities, but hard to plan:
+
+- **Vehicles differ in more than size.** A truck carries 220 units but detours around the city centre; a cargo bike carries 32, is slower and emits nothing, but can take car-free shortcuts. Each type also unloads at its own pace.
+- **Weight and volume are separate limits.** A van can be full by volume long before it is full by weight.
+- **Each vehicle can make several trips** a shift, reloading at the depot in between.
+- **There is no single best plan.** Cheaper usually means more emissions or a later finish. A dispatcher needs the trade-offs, not one number.
+
+Even for 100 orders, trying every plan is impossible, so we search smartly.
+
+## 🧠 How the algorithm works
+
+A **multi-objective iterated local search** that keeps an archive of the best trade-offs found so far (up to 50). Each round it:
+
+1. **picks a viewpoint**, i.e. a set of weights for cost / emissions / time (15 viewpoints in turn);
+2. **takes a plan** from the archive;
+3. **breaks and rebuilds** part of it: removes 10–35 % of nearby customers and inserts them back;
+4. **polishes** the plan with small moves: move a customer, reverse part of a route, swap vehicle type, move a trip;
+5. **keeps it** if no plan in the archive beats it on all three objectives.
+
+Local search alone gets stuck in plans that no small move improves (*local optima*). Two things get it out: the **break-and-rebuild** step, and **changing the viewpoint**, which turned a stuck plan into an improvable one in 56.5 % of switches. Our [ablation study](docs/REFERENCE.md#ablation-configurations-mpzis-2026) shows both are essential, while auto-tuning the break size gives nothing.
+
 ## ⚡ Try it in a minute
 
 ```bash
@@ -58,6 +81,10 @@ Tymur Mirzaiev · Oles Honchar Dnipro National University · timur.mirzaiev@gmai
 ## 🇺🇦 Українською
 
 **Що це.** Програма, яка планує доставку вантажівками, фургонами й вантажними велосипедами. Вона видає не один план, а кілька компромісних між вартістю, викидами й часом завершення, а ви обираєте потрібний.
+
+**У чому складність.** Машини різняться не лише розміром: вантажівка об’їжджає центр, велосипед їде пішохідними зв’язками; вага й об’єм — окремі обмеження; кожна машина може зробити кілька рейсів. І найкращого плану немає: дешевше зазвичай означає більше викидів або пізніше завершення.
+
+**Як працює алгоритм.** Ітерований локальний пошук з архівом найкращих компромісів. У кожному циклі він обирає «точку зору» (ваги критеріїв), бере план з архіву, ламає й відбудовує його частину, доводить дрібними ходами і зберігає, якщо план не гірший за інші. Злам і зміна точки зору допомагають не застрягати в локальних оптимумах.
 
 **Як спробувати:**
 
