@@ -1,0 +1,562 @@
+{
+ "name": "RC101_50",
+ "type": "MT-HFVRPTW",
+ "source": "derived from Solomon RC101, first 50 customers",
+ "customers": 50,
+ "horizon": 240.0,
+ "reload_time": 15.0,
+ "fleet": "unlimited",
+ "zone": {
+  "center": [
+   47.5,
+   45.0
+  ],
+  "radius": 20.0,
+  "truck_factor": 1.55,
+  "bike_factor": 0.88
+ },
+ "vehicle_types": [
+  {
+   "name": "truck",
+   "mass_cap": 200.0,
+   "volume_cap": 48.0,
+   "fixed_cost": 190.0,
+   "cost_per_dist": 1.45,
+   "speed": 0.85,
+   "emission_per_dist": 1.0,
+   "service_mult": 1.4
+  },
+  {
+   "name": "van",
+   "mass_cap": 100.0,
+   "volume_cap": 30.0,
+   "fixed_cost": 105.0,
+   "cost_per_dist": 1.0,
+   "speed": 1.0,
+   "emission_per_dist": 0.55,
+   "service_mult": 1.0
+  },
+  {
+   "name": "bike",
+   "mass_cap": 30.0,
+   "volume_cap": 11.0,
+   "fixed_cost": 38.0,
+   "cost_per_dist": 0.45,
+   "speed": 0.7,
+   "emission_per_dist": 0.0,
+   "service_mult": 0.7
+  }
+ ],
+ "nodes": [
+  {
+   "id": 0,
+   "x": 40.0,
+   "y": 50.0,
+   "mass": 0.0,
+   "volume": 0.0,
+   "ready": 0.0,
+   "due": 240.0,
+   "service": 0.0
+  },
+  {
+   "id": 1,
+   "x": 25.0,
+   "y": 85.0,
+   "mass": 20.0,
+   "volume": 7.0,
+   "ready": 145.0,
+   "due": 175.0,
+   "service": 10.0
+  },
+  {
+   "id": 2,
+   "x": 22.0,
+   "y": 75.0,
+   "mass": 30.0,
+   "volume": 16.5,
+   "ready": 50.0,
+   "due": 80.0,
+   "service": 10.0
+  },
+  {
+   "id": 3,
+   "x": 22.0,
+   "y": 85.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 109.0,
+   "due": 139.0,
+   "service": 10.0
+  },
+  {
+   "id": 4,
+   "x": 20.0,
+   "y": 80.0,
+   "mass": 40.0,
+   "volume": 18.000000000000004,
+   "ready": 141.0,
+   "due": 171.0,
+   "service": 10.0
+  },
+  {
+   "id": 5,
+   "x": 20.0,
+   "y": 85.0,
+   "mass": 20.0,
+   "volume": 3.0,
+   "ready": 41.0,
+   "due": 71.0,
+   "service": 10.0
+  },
+  {
+   "id": 6,
+   "x": 18.0,
+   "y": 75.0,
+   "mass": 20.0,
+   "volume": 7.0,
+   "ready": 95.0,
+   "due": 125.0,
+   "service": 10.0
+  },
+  {
+   "id": 7,
+   "x": 15.0,
+   "y": 75.0,
+   "mass": 20.0,
+   "volume": 11.0,
+   "ready": 79.0,
+   "due": 109.0,
+   "service": 10.0
+  },
+  {
+   "id": 8,
+   "x": 15.0,
+   "y": 80.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 91.0,
+   "due": 121.0,
+   "service": 10.0
+  },
+  {
+   "id": 9,
+   "x": 10.0,
+   "y": 35.0,
+   "mass": 20.0,
+   "volume": 9.000000000000002,
+   "ready": 91.0,
+   "due": 121.0,
+   "service": 10.0
+  },
+  {
+   "id": 10,
+   "x": 10.0,
+   "y": 40.0,
+   "mass": 30.0,
+   "volume": 4.5,
+   "ready": 119.0,
+   "due": 149.0,
+   "service": 10.0
+  },
+  {
+   "id": 11,
+   "x": 8.0,
+   "y": 40.0,
+   "mass": 40.0,
+   "volume": 14.0,
+   "ready": 59.0,
+   "due": 89.0,
+   "service": 10.0
+  },
+  {
+   "id": 12,
+   "x": 8.0,
+   "y": 45.0,
+   "mass": 20.0,
+   "volume": 11.0,
+   "ready": 64.0,
+   "due": 94.0,
+   "service": 10.0
+  },
+  {
+   "id": 13,
+   "x": 5.0,
+   "y": 35.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 142.0,
+   "due": 172.0,
+   "service": 10.0
+  },
+  {
+   "id": 14,
+   "x": 5.0,
+   "y": 45.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 35.0,
+   "due": 65.0,
+   "service": 10.0
+  },
+  {
+   "id": 15,
+   "x": 2.0,
+   "y": 40.0,
+   "mass": 20.0,
+   "volume": 3.0,
+   "ready": 58.0,
+   "due": 88.0,
+   "service": 10.0
+  },
+  {
+   "id": 16,
+   "x": 0.0,
+   "y": 40.0,
+   "mass": 20.0,
+   "volume": 7.0,
+   "ready": 72.0,
+   "due": 102.0,
+   "service": 10.0
+  },
+  {
+   "id": 17,
+   "x": 0.0,
+   "y": 45.0,
+   "mass": 20.0,
+   "volume": 11.0,
+   "ready": 149.0,
+   "due": 179.0,
+   "service": 10.0
+  },
+  {
+   "id": 18,
+   "x": 44.0,
+   "y": 5.0,
+   "mass": 20.0,
+   "volume": 5.0,
+   "ready": 87.0,
+   "due": 117.0,
+   "service": 10.0
+  },
+  {
+   "id": 19,
+   "x": 42.0,
+   "y": 10.0,
+   "mass": 40.0,
+   "volume": 18.000000000000004,
+   "ready": 72.0,
+   "due": 102.0,
+   "service": 10.0
+  },
+  {
+   "id": 20,
+   "x": 42.0,
+   "y": 15.0,
+   "mass": 10.0,
+   "volume": 1.5,
+   "ready": 122.0,
+   "due": 152.0,
+   "service": 10.0
+  },
+  {
+   "id": 21,
+   "x": 40.0,
+   "y": 5.0,
+   "mass": 10.0,
+   "volume": 3.5,
+   "ready": 67.0,
+   "due": 97.0,
+   "service": 10.0
+  },
+  {
+   "id": 22,
+   "x": 40.0,
+   "y": 15.0,
+   "mass": 40.0,
+   "volume": 22.0,
+   "ready": 92.0,
+   "due": 122.0,
+   "service": 10.0
+  },
+  {
+   "id": 23,
+   "x": 38.0,
+   "y": 5.0,
+   "mass": 30.0,
+   "volume": 7.5,
+   "ready": 65.0,
+   "due": 95.0,
+   "service": 10.0
+  },
+  {
+   "id": 24,
+   "x": 38.0,
+   "y": 15.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 148.0,
+   "due": 178.0,
+   "service": 10.0
+  },
+  {
+   "id": 25,
+   "x": 35.0,
+   "y": 5.0,
+   "mass": 20.0,
+   "volume": 3.0,
+   "ready": 154.0,
+   "due": 184.0,
+   "service": 10.0
+  },
+  {
+   "id": 26,
+   "x": 95.0,
+   "y": 30.0,
+   "mass": 30.0,
+   "volume": 10.5,
+   "ready": 115.0,
+   "due": 145.0,
+   "service": 10.0
+  },
+  {
+   "id": 27,
+   "x": 95.0,
+   "y": 35.0,
+   "mass": 20.0,
+   "volume": 11.0,
+   "ready": 62.0,
+   "due": 92.0,
+   "service": 10.0
+  },
+  {
+   "id": 28,
+   "x": 92.0,
+   "y": 30.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 62.0,
+   "due": 92.0,
+   "service": 10.0
+  },
+  {
+   "id": 29,
+   "x": 90.0,
+   "y": 35.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 67.0,
+   "due": 97.0,
+   "service": 10.0
+  },
+  {
+   "id": 30,
+   "x": 88.0,
+   "y": 30.0,
+   "mass": 10.0,
+   "volume": 1.5,
+   "ready": 74.0,
+   "due": 104.0,
+   "service": 10.0
+  },
+  {
+   "id": 31,
+   "x": 88.0,
+   "y": 35.0,
+   "mass": 20.0,
+   "volume": 7.0,
+   "ready": 61.0,
+   "due": 91.0,
+   "service": 10.0
+  },
+  {
+   "id": 32,
+   "x": 87.0,
+   "y": 30.0,
+   "mass": 10.0,
+   "volume": 5.5,
+   "ready": 131.0,
+   "due": 161.0,
+   "service": 10.0
+  },
+  {
+   "id": 33,
+   "x": 85.0,
+   "y": 25.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 51.0,
+   "due": 81.0,
+   "service": 10.0
+  },
+  {
+   "id": 34,
+   "x": 85.0,
+   "y": 35.0,
+   "mass": 30.0,
+   "volume": 13.500000000000002,
+   "ready": 111.0,
+   "due": 141.0,
+   "service": 10.0
+  },
+  {
+   "id": 35,
+   "x": 67.0,
+   "y": 85.0,
+   "mass": 20.0,
+   "volume": 3.0,
+   "ready": 139.0,
+   "due": 169.0,
+   "service": 10.0
+  },
+  {
+   "id": 36,
+   "x": 65.0,
+   "y": 85.0,
+   "mass": 40.0,
+   "volume": 14.0,
+   "ready": 43.0,
+   "due": 73.0,
+   "service": 10.0
+  },
+  {
+   "id": 37,
+   "x": 65.0,
+   "y": 82.0,
+   "mass": 10.0,
+   "volume": 5.5,
+   "ready": 124.0,
+   "due": 154.0,
+   "service": 10.0
+  },
+  {
+   "id": 38,
+   "x": 62.0,
+   "y": 80.0,
+   "mass": 30.0,
+   "volume": 7.5,
+   "ready": 75.0,
+   "due": 105.0,
+   "service": 10.0
+  },
+  {
+   "id": 39,
+   "x": 60.0,
+   "y": 80.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 37.0,
+   "due": 67.0,
+   "service": 10.0
+  },
+  {
+   "id": 40,
+   "x": 60.0,
+   "y": 85.0,
+   "mass": 30.0,
+   "volume": 4.5,
+   "ready": 85.0,
+   "due": 115.0,
+   "service": 10.0
+  },
+  {
+   "id": 41,
+   "x": 58.0,
+   "y": 75.0,
+   "mass": 20.0,
+   "volume": 7.0,
+   "ready": 92.0,
+   "due": 122.0,
+   "service": 10.0
+  },
+  {
+   "id": 42,
+   "x": 55.0,
+   "y": 80.0,
+   "mass": 10.0,
+   "volume": 5.5,
+   "ready": 33.0,
+   "due": 63.0,
+   "service": 10.0
+  },
+  {
+   "id": 43,
+   "x": 55.0,
+   "y": 85.0,
+   "mass": 20.0,
+   "volume": 5.0,
+   "ready": 128.0,
+   "due": 158.0,
+   "service": 10.0
+  },
+  {
+   "id": 44,
+   "x": 55.0,
+   "y": 82.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 64.0,
+   "due": 94.0,
+   "service": 10.0
+  },
+  {
+   "id": 45,
+   "x": 20.0,
+   "y": 82.0,
+   "mass": 10.0,
+   "volume": 1.5,
+   "ready": 37.0,
+   "due": 67.0,
+   "service": 10.0
+  },
+  {
+   "id": 46,
+   "x": 18.0,
+   "y": 80.0,
+   "mass": 10.0,
+   "volume": 3.5,
+   "ready": 113.0,
+   "due": 143.0,
+   "service": 10.0
+  },
+  {
+   "id": 47,
+   "x": 2.0,
+   "y": 45.0,
+   "mass": 10.0,
+   "volume": 5.5,
+   "ready": 45.0,
+   "due": 75.0,
+   "service": 10.0
+  },
+  {
+   "id": 48,
+   "x": 42.0,
+   "y": 5.0,
+   "mass": 10.0,
+   "volume": 2.5,
+   "ready": 151.0,
+   "due": 181.0,
+   "service": 10.0
+  },
+  {
+   "id": 49,
+   "x": 42.0,
+   "y": 12.0,
+   "mass": 10.0,
+   "volume": 4.500000000000001,
+   "ready": 104.0,
+   "due": 134.0,
+   "service": 10.0
+  },
+  {
+   "id": 50,
+   "x": 72.0,
+   "y": 35.0,
+   "mass": 30.0,
+   "volume": 4.5,
+   "ready": 116.0,
+   "due": 146.0,
+   "service": 10.0
+  }
+ ]
+}

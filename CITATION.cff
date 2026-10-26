@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or the test instances, please cite it as below."
+title: "MT-HFVRPTW stand: multi-objective multi-trip heterogeneous fleet vehicle routing with time windows"
+type: software
+authors:
+  - family-names: Mirzaiev
+    given-names: Tymur
+    affiliation: "Oles Honchar Dnipro National University"
+    orcid: "https://orcid.org/0009-0006-0158-4329"
+  - family-names: Mykhalchuk
+    given-names: Hanna
+    affiliation: "Oles Honchar Dnipro National University"
+    orcid: "https://orcid.org/0000-0002-5476-6349"
+date-released: 2026-10-26
+version: "1.0.0"
+keywords:
+  - vehicle routing
+  - heterogeneous fleet
+  - multi-trip
+  - time windows
+  - multi-objective optimisation
+  - iterated local search

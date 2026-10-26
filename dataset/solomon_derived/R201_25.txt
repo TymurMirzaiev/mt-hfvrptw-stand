@@ -1,0 +1,48 @@
+NAME : R201_25
+TYPE : MT-HFVRPTW
+SOURCE : derived from Solomon R201, first 25 customers
+CUSTOMERS : 25
+HORIZON : 1000
+RELOAD_TIME : 15
+FLEET : unlimited number of vehicles of each type
+ZONE_CENTER : 35 35
+ZONE_RADIUS : 15
+TRUCK_ZONE_FACTOR : 1.55
+BIKE_FACTOR : 0.88
+DISTANCE : Euclidean, not rounded; truck x TRUCK_ZONE_FACTOR on arcs whose midpoint lies in the zone; bike x BIKE_FACTOR on all arcs; van plain
+TRAVEL_TIME : distance / speed of the type
+SERVICE_TIME : node service x service_mult of the type
+VEHICLE_TYPES_SECTION
+# id name mass_cap volume_cap fixed_cost cost_per_dist speed emission_per_dist service_mult
+1 truck 1000 240 190 1.45 0.85 1 1.4
+2 van 500 150 105 1 1 0.55 1
+3 bike 150 55 38 0.45 0.7 0 0.7
+NODE_SECTION
+# id x y mass volume ready due service   (node 0 = depot)
+0 35 35 0 0 0 1000 0
+1 41 49 10 3.5 707 848 10
+2 35 17 7 3.85 143 282 10
+3 55 45 13 3.25 527 584 10
+4 55 20 19 8.55 678 801 10
+5 15 30 26 3.9 34 209 10
+6 25 30 3 1.05 415 514 10
+7 20 50 5 2.75 331 410 10
+8 10 43 9 2.25 404 481 10
+9 55 60 16 7.2 400 497 10
+10 30 60 16 2.4 577 632 10
+11 20 65 12 4.2 206 325 10
+12 50 35 19 10.45 228 345 10
+13 30 25 23 5.75 690 827 10
+14 15 10 20 9 32 243 10
+15 30 5 8 1.2 175 300 10
+16 10 20 19 6.65 272 373 10
+17 5 30 2 1.1 733 870 10
+18 20 40 12 3 377 434 10
+19 15 60 17 7.65 269 378 10
+20 45 65 9 1.35 581 666 10
+21 45 20 11 3.85 214 331 10
+22 45 10 18 9.9 409 494 10
+23 55 5 29 7.25 206 325 10
+24 65 35 3 1.35 704 847 10
+25 65 20 6 0.9 817 956 10
+EOF
